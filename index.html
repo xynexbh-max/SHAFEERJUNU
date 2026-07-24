@@ -1,0 +1,3354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shafeerjunu | Founder of B Company</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <script>
+
+    tailwind.config = {
+
+      theme: {
+
+        extend: {
+
+          colors: {
+
+            brandYellow: "#FFD400",
+
+            darkBlack: "#080808",
+
+            softBlack: "#111111"
+
+          },
+
+          fontFamily: {
+
+            sans: ["Inter", "sans-serif"]
+
+          }
+
+        }
+
+      }
+
+    }
+
+  </script>
+
+
+  <style>
+
+
+    /* =========================
+       GLOBAL
+    ========================= */
+
+    * {
+
+      margin: 0;
+
+      padding: 0;
+
+      box-sizing: border-box;
+
+      scroll-behavior: smooth;
+
+    }
+
+
+    body {
+
+      background: #080808;
+
+      color: white;
+
+      font-family: "Inter", sans-serif;
+
+      overflow-x: hidden;
+
+    }
+
+
+    .heading-font {
+
+      font-family: "Barlow Condensed", sans-serif;
+
+    }
+
+
+    /* =========================
+       SCROLLBAR
+    ========================= */
+
+    ::-webkit-scrollbar {
+
+      width: 8px;
+
+    }
+
+
+    ::-webkit-scrollbar-track {
+
+      background: #080808;
+
+    }
+
+
+    ::-webkit-scrollbar-thumb {
+
+      background: #FFD400;
+
+    }
+
+
+    /* =========================
+       COLORS
+    ========================= */
+
+    .yellow-gradient {
+
+      background:
+
+        linear-gradient(
+
+          135deg,
+
+          #FFD400 0%,
+
+          #F3B900 100%
+
+        );
+
+    }
+
+
+    .text-gradient {
+
+      background:
+
+        linear-gradient(
+
+          90deg,
+
+          #FFD400,
+
+          #fff2a1
+
+        );
+
+      -webkit-background-clip: text;
+
+      -webkit-text-fill-color: transparent;
+
+    }
+
+
+    /* =========================
+       HERO GRID
+    ========================= */
+
+    .hero-grid {
+
+      background-image:
+
+        linear-gradient(
+
+          rgba(255, 212, 0, 0.035) 1px,
+
+          transparent 1px
+
+        ),
+
+        linear-gradient(
+
+          90deg,
+
+          rgba(255, 212, 0, 0.035) 1px,
+
+          transparent 1px
+
+        );
+
+      background-size: 60px 60px;
+
+    }
+
+
+    /* =========================
+       GLASS
+    ========================= */
+
+    .glass {
+
+      background:
+
+        rgba(255, 255, 255, 0.035);
+
+      border:
+
+        1px solid rgba(255, 255, 255, 0.1);
+
+      backdrop-filter:
+
+        blur(20px);
+
+    }
+
+
+    /* =========================
+       GLOW
+    ========================= */
+
+    .yellow-glow {
+
+      box-shadow:
+
+        0 0 100px rgba(255, 212, 0, 0.16);
+
+    }
+
+
+    /* =========================
+       YELLOW LINE
+    ========================= */
+
+    .yellow-line {
+
+      width: 70px;
+
+      height: 4px;
+
+      background: #FFD400;
+
+    }
+
+
+    /* =========================
+       GYM CARDS
+    ========================= */
+
+    .gym-card {
+
+      transition: all 0.4s ease;
+
+    }
+
+
+    .gym-card:hover {
+
+      transform: translateY(-10px);
+
+      border-color: #FFD400;
+
+      box-shadow:
+
+        0 20px 60px rgba(255, 212, 0, 0.12);
+
+    }
+
+
+    /* =========================
+       ROTATING RING
+    ========================= */
+
+    .rotating-ring {
+
+      animation:
+
+        rotateRing 25s linear infinite;
+
+    }
+
+
+    @keyframes rotateRing {
+
+      from {
+
+        transform:
+
+          translate(-50%, -50%)
+
+          rotate(0deg);
+
+      }
+
+      to {
+
+        transform:
+
+          translate(-50%, -50%)
+
+          rotate(360deg);
+
+      }
+
+    }
+
+
+    /* =========================
+       FLOATING
+    ========================= */
+
+    .floating {
+
+      animation:
+
+        floating 5s ease-in-out infinite;
+
+    }
+
+
+    @keyframes floating {
+
+      0%,
+
+      100% {
+
+        transform:
+
+          translateY(0px);
+
+      }
+
+      50% {
+
+        transform:
+
+          translateY(-12px);
+
+      }
+
+    }
+
+
+    /* =========================
+       FADE UP
+    ========================= */
+
+    .fade-up {
+
+      opacity: 0;
+
+      transform: translateY(40px);
+
+      transition: all 0.9s ease;
+
+    }
+
+
+    .fade-up.show {
+
+      opacity: 1;
+
+      transform: translateY(0);
+
+    }
+
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    .mobile-menu {
+
+      display: none;
+
+    }
+
+
+    .mobile-menu.active {
+
+      display: block;
+
+    }
+
+
+    /* =========================
+       FORM
+    ========================= */
+
+    input::placeholder,
+
+    textarea::placeholder {
+
+      color: #666;
+
+    }
+
+
+    input,
+
+    textarea {
+
+      transition: all 0.3s ease;
+
+    }
+
+
+    input:focus,
+
+    textarea:focus {
+
+      box-shadow:
+
+        0 0 0 1px #FFD400;
+
+    }
+
+
+    /* =========================
+       ECOSYSTEM
+    ========================= */
+
+    .ecosystem-line {
+
+      position: absolute;
+
+      background: rgba(255, 212, 0, 0.22);
+
+      z-index: 1;
+
+    }
+
+
+    .line-top {
+
+      width: 2px;
+
+      height: 150px;
+
+      left: 50%;
+
+      top: 25%;
+
+      transform: translateX(-50%);
+
+    }
+
+
+    .line-left {
+
+      width: 180px;
+
+      height: 2px;
+
+      left: 24%;
+
+      top: 50%;
+
+    }
+
+
+    .line-right {
+
+      width: 180px;
+
+      height: 2px;
+
+      right: 24%;
+
+      top: 50%;
+
+    }
+
+
+    .line-bottom-left {
+
+      width: 160px;
+
+      height: 2px;
+
+      left: 40%;
+
+      top: 70%;
+
+      transform: rotate(140deg);
+
+    }
+
+
+    .line-bottom-right {
+
+      width: 160px;
+
+      height: 2px;
+
+      left: 60%;
+
+      top: 70%;
+
+      transform: rotate(40deg);
+
+    }
+
+
+    @media (max-width: 768px) {
+
+
+      .ecosystem-line {
+
+        display: none;
+
+      }
+
+    }
+
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       NAVIGATION
+  ====================================================== -->
+
+
+  <header
+    class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/10"
+  >
+
+    <div
+      class="max-w-7xl mx-auto px-6 lg:px-10"
+    >
+
+      <div
+        class="h-20 flex items-center justify-between"
+      >
+
+
+        <!-- LOGO -->
+
+        <a
+          href="#home"
+          class="flex items-center gap-3"
+        >
+
+          <div
+            class="w-11 h-11 yellow-gradient text-black flex items-center justify-center font-black text-xl"
+          >
+
+            B
+
+          </div>
+
+
+          <div>
+
+            <p
+              class="font-black tracking-widest text-white"
+            >
+
+              B COMPANY
+
+            </p>
+
+
+            <p
+              class="text-[9px] text-gray-500 tracking-[0.3em] uppercase"
+            >
+
+              Building Strength
+
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <!-- DESKTOP MENU -->
+
+        <nav
+          class="hidden md:flex items-center gap-8 text-sm"
+        >
+
+          <a
+            href="#about"
+            class="text-gray-400 hover:text-brandYellow transition"
+          >
+
+            About
+
+          </a>
+
+
+          <a
+            href="#b-company"
+            class="text-gray-400 hover:text-brandYellow transition"
+          >
+
+            B Company
+
+          </a>
+
+
+          <a
+            href="#gyms"
+            class="text-gray-400 hover:text-brandYellow transition"
+          >
+
+            Our Gyms
+
+          </a>
+
+
+          <a
+            href="#vision"
+            class="text-gray-400 hover:text-brandYellow transition"
+          >
+
+            Vision
+
+          </a>
+
+
+          <a
+            href="#leadership"
+            class="text-gray-400 hover:text-brandYellow transition"
+          >
+
+            Leadership
+
+          </a>
+
+        </nav>
+
+
+        <!-- CONNECT BUTTON -->
+
+        <a
+          href="#contact"
+          class="hidden md:inline-block yellow-gradient text-black font-bold px-6 py-3 text-sm hover:scale-105 transition"
+        >
+
+          CONNECT WITH US
+
+        </a>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+          id="menuBtn"
+          class="md:hidden text-brandYellow text-2xl"
+        >
+
+          ☰
+
+        </button>
+
+      </div>
+
+
+      <!-- MOBILE MENU -->
+
+      <div
+        id="mobileMenu"
+        class="mobile-menu pb-6"
+      >
+
+        <div
+          class="flex flex-col gap-5 text-gray-300"
+        >
+
+          <a href="#about">
+
+            About
+
+          </a>
+
+
+          <a href="#b-company">
+
+            B Company
+
+          </a>
+
+
+          <a href="#gyms">
+
+            Our Gyms
+
+          </a>
+
+
+          <a href="#vision">
+
+            Vision
+
+          </a>
+
+
+          <a href="#leadership">
+
+            Leadership
+
+          </a>
+
+
+          <a href="#contact">
+
+            Connect With Us
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       HERO SECTION
+  ====================================================== -->
+
+
+  <section
+    id="home"
+    class="relative min-h-screen flex items-center overflow-hidden hero-grid pt-20"
+  >
+
+
+    <!-- BACKGROUND GLOW -->
+
+    <div
+      class="absolute top-20 right-0 w-96 h-96 bg-yellow-400/10 blur-[120px] rounded-full"
+    ></div>
+
+
+    <div
+      class="absolute bottom-0 left-0 w-96 h-96 bg-yellow-400/5 blur-[120px] rounded-full"
+    ></div>
+
+
+    <div
+      class="max-w-7xl mx-auto px-6 lg:px-10 w-full"
+    >
+
+      <div
+        class="grid lg:grid-cols-2 gap-16 items-center"
+      >
+
+
+        <!-- HERO CONTENT -->
+
+        <div
+          class="order-2 lg:order-1 fade-up"
+        >
+
+
+          <div
+            class="flex items-center gap-4 mb-8"
+          >
+
+            <div
+              class="yellow-line"
+            ></div>
+
+
+            <span
+              class="text-brandYellow uppercase tracking-[0.35em] text-xs font-bold"
+            >
+
+              Founder & Managing Director
+
+            </span>
+
+          </div>
+
+
+          <h1
+            class="heading-font uppercase font-black text-7xl md:text-8xl lg:text-[9rem] leading-[0.78] tracking-tight"
+          >
+
+            SHAFEER
+
+            <br>
+
+            <span
+              class="text-gradient"
+            >
+
+              JUNU
+
+            </span>
+
+          </h1>
+
+
+          <p
+            class="mt-8 text-xl md:text-2xl text-gray-300 max-w-xl leading-relaxed"
+          >
+
+            Founder & Managing Director of
+
+            <span
+              class="text-brandYellow font-bold"
+            >
+
+              B COMPANY
+
+            </span>
+
+            — the parent company behind a growing network of fitness brands across Bahrain.
+
+          </p>
+
+
+          <p
+            class="mt-6 text-gray-500 text-lg max-w-xl leading-relaxed"
+          >
+
+            With more than 18 years of experience in the fitness industry,
+            Shafeerjunu continues to build a stronger fitness culture through
+            passion, leadership and long-term vision.
+
+          </p>
+
+
+          <div
+            class="mt-10 flex flex-wrap gap-4"
+          >
+
+            <a
+              href="#about"
+              class="yellow-gradient text-black px-8 py-4 font-bold hover:scale-105 transition"
+            >
+
+              EXPLORE THE JOURNEY
+
+            </a>
+
+
+            <a
+              href="#contact"
+              class="border border-white/20 px-8 py-4 font-bold hover:border-brandYellow hover:text-brandYellow transition"
+            >
+
+              LET'S CONNECT
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- FOUNDER IMAGE -->
+
+        <div
+          class="order-1 lg:order-2 relative flex justify-center fade-up"
+        >
+
+
+          <div
+            class="absolute w-[430px] h-[430px] md:w-[550px] md:h-[550px] rounded-full border border-brandYellow/20 rotating-ring"
+          ></div>
+
+
+          <div
+            class="absolute w-[370px] h-[370px] md:w-[480px] md:h-[480px] rounded-full border border-white/10"
+          ></div>
+
+
+          <div
+            class="relative w-[320px] h-[440px] md:w-[420px] md:h-[570px] overflow-hidden bg-[#151515] border border-white/10 yellow-glow"
+          >
+
+            <img
+              src="image/founder.png"
+              alt="Shafeerjunu Founder and Managing Director of B Company"
+              class="w-full h-full object-cover"
+            >
+
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"
+            ></div>
+
+
+            <div
+              class="absolute bottom-8 left-8 right-8"
+            >
+
+              <p
+                class="text-brandYellow text-xs uppercase tracking-[0.3em] font-bold"
+              >
+
+                B COMPANY
+
+              </p>
+
+
+              <h3
+                class="heading-font text-4xl md:text-5xl font-black mt-2"
+              >
+
+                SHAFEERJUNU
+
+              </h3>
+
+
+              <p
+                class="text-gray-300 text-sm mt-2"
+              >
+
+                Founder & Managing Director
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="absolute bottom-8 -left-4 md:-left-12 glass px-6 py-5 floating"
+          >
+
+            <p
+              class="text-brandYellow text-4xl font-black"
+            >
+
+              18+
+
+            </p>
+
+
+            <p
+              class="text-gray-400 text-xs uppercase tracking-widest"
+            >
+
+              Years Experience
+
+            </p>
+
+          </div>
+
+
+          <div
+            class="absolute top-10 -right-4 md:-right-12 w-24 h-24 rounded-full yellow-gradient text-black flex items-center justify-center text-5xl font-black floating"
+          >
+
+            B
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       ABOUT
+  ====================================================== -->
+
+
+  <section
+    id="about"
+    class="py-32 bg-[#0d0d0d]"
+  >
+
+    <div
+      class="max-w-7xl mx-auto px-6 lg:px-10"
+    >
+
+      <div
+        class="grid lg:grid-cols-2 gap-20 items-center"
+      >
+
+
+        <div
+          class="fade-up"
+        >
+
+          <p
+            class="text-brandYellow uppercase tracking-[0.3em] text-sm font-bold mb-5"
+          >
+
+            The Story Behind The Vision
+
+          </p>
+
+
+          <h2
+            class="heading-font uppercase text-6xl md:text-8xl font-black leading-none"
+          >
+
+            BUILT ON
+
+            <br>
+
+            <span
+              class="text-gradient"
+            >
+
+              DISCIPLINE.
+
+            </span>
+
+          </h2>
+
+
+          <div
+            class="yellow-line mt-8 mb-8"
+          ></div>
+
+
+          <p
+            class="text-gray-400 text-lg leading-8"
+          >
+
+            With more than 18 years of experience in the fitness industry,
+            Shafeerjunu has dedicated his journey to creating spaces where
+            people can become stronger — physically, mentally and personally.
+
+          </p>
+
+
+          <p
+            class="text-gray-400 text-lg leading-8 mt-6"
+          >
+
+            What started as a passion for fitness has grown into a rapidly
+            expanding fitness group with five successfully operating gyms
+            across Bahrain and three more gyms currently under development.
+
+          </p>
+
+        </div>
+
+
+        <div
+          class="grid grid-cols-2 gap-4 fade-up"
+        >
+
+
+          <div
+            class="glass p-8 h-64 flex flex-col justify-between"
+          >
+
+            <span
+              class="text-5xl text-brandYellow font-black"
+            >
+
+              01
+
+            </span>
+
+
+            <div>
+
+              <h3
+                class="text-xl font-bold"
+              >
+
+                Passion
+
+              </h3>
+
+
+              <p
+                class="text-gray-500 text-sm mt-2"
+              >
+
+                Fitness is more than business. It is a lifestyle.
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="yellow-gradient text-black p-8 h-64 flex flex-col justify-between mt-12"
+          >
+
+            <span
+              class="text-5xl font-black"
+            >
+
+              02
+
+            </span>
+
+
+            <div>
+
+              <h3
+                class="text-xl font-bold"
+              >
+
+                Leadership
+
+              </h3>
+
+
+              <p
+                class="text-black/60 text-sm mt-2"
+              >
+
+                Creating teams that create transformation.
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="yellow-gradient text-black p-8 h-64 flex flex-col justify-between"
+          >
+
+            <span
+              class="text-5xl font-black"
+            >
+
+              03
+
+            </span>
+
+
+            <div>
+
+              <h3
+                class="text-xl font-bold"
+              >
+
+                Growth
+
+              </h3>
+
+
+              <p
+                class="text-black/60 text-sm mt-2"
+              >
+
+                Always moving forward. Never standing still.
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="glass p-8 h-64 flex flex-col justify-between mt-12"
+          >
+
+            <span
+              class="text-5xl text-brandYellow font-black"
+            >
+
+              04
+
+            </span>
+
+
+            <div>
+
+              <h3
+                class="text-xl font-bold"
+              >
+
+                Community
+
+              </h3>
+
+
+              <p
+                class="text-gray-500 text-sm mt-2"
+              >
+
+                Stronger people. Stronger communities.
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       B COMPANY ECOSYSTEM
+  ====================================================== -->
+
+
+  <section
+    id="b-company"
+    class="py-32 bg-[#080808] relative overflow-hidden"
+  >
+
+
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-brandYellow/5"
+    ></div>
+
+
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-brandYellow/5"
+    ></div>
+
+
+    <div
+      class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10"
+    >
+
+
+      <div
+        class="text-center mb-20 fade-up"
+      >
+
+        <p
+          class="text-brandYellow uppercase tracking-[0.3em] text-sm font-bold mb-5"
+        >
+
+          The Parent Company
+
+        </p>
+
+
+        <h2
+          class="heading-font uppercase text-6xl md:text-8xl font-black leading-none"
+        >
+
+          ONE VISION.
+
+          <br>
+
+          <span
+            class="text-gradient"
+          >
+
+            FIVE BRANDS.
+
+          </span>
+
+        </h2>
+
+
+        <p
+          class="text-gray-500 max-w-2xl mx-auto mt-8 text-lg leading-relaxed"
+        >
+
+          B Company is the parent company behind a growing network of fitness brands across Bahrain.
+
+          <br><br>
+
+          Each gym has its own identity, location and community —
+          while being connected by one shared vision.
+
+        </p>
+
+      </div>
+
+
+      <!-- DESKTOP ECOSYSTEM -->
+
+      <div
+        class="relative max-w-6xl mx-auto h-[700px] hidden md:block fade-up"
+      >
+
+
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[560px] h-[560px] rounded-full border border-brandYellow/20 rotating-ring"
+        ></div>
+
+
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-white/10"
+        ></div>
+
+
+        <div
+          class="ecosystem-line line-top"
+        ></div>
+
+
+        <div
+          class="ecosystem-line line-left"
+        ></div>
+
+
+        <div
+          class="ecosystem-line line-right"
+        ></div>
+
+
+        <div
+          class="ecosystem-line line-bottom-left"
+        ></div>
+
+
+        <div
+          class="ecosystem-line line-bottom-right"
+        ></div>
+
+
+        <!-- CENTER -->
+
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 md:w-60 md:h-60 rounded-full yellow-gradient text-black flex flex-col items-center justify-center z-20 yellow-glow"
+        >
+
+          <span
+            class="text-8xl md:text-9xl font-black heading-font leading-none"
+          >
+
+            B
+
+          </span>
+
+
+          <span
+            class="text-xs font-black tracking-[0.3em] uppercase"
+          >
+
+            COMPANY
+
+          </span>
+
+        </div>
+
+
+        <!-- B12 -->
+
+        <div
+          class="absolute top-0 left-1/2 -translate-x-1/2 glass px-10 py-7 text-center z-10 hover:border-brandYellow transition"
+        >
+
+          <p
+            class="text-5xl font-black text-brandYellow heading-font"
+          >
+
+            B12
+
+          </p>
+
+
+          <p
+            class="font-bold"
+          >
+
+            FITNESS
+
+          </p>
+
+
+          <p
+            class="text-gray-500 text-xs mt-1"
+          >
+
+            SANABIS
+
+          </p>
+
+        </div>
+
+
+        <!-- B7 -->
+
+        <div
+          class="absolute top-1/2 left-0 -translate-y-1/2 glass px-10 py-7 text-center z-10 hover:border-brandYellow transition"
+        >
+
+          <p
+            class="text-5xl font-black text-brandYellow heading-font"
+          >
+
+            B7
+
+          </p>
+
+
+          <p
+            class="font-bold"
+          >
+
+            FITNESS
+
+          </p>
+
+
+          <p
+            class="text-gray-500 text-xs mt-1"
+          >
+
+            TUBLI
+
+          </p>
+
+        </div>
+
+
+        <!-- B3 -->
+
+        <div
+          class="absolute top-1/2 right-0 -translate-y-1/2 glass px-10 py-7 text-center z-10 hover:border-brandYellow transition"
+        >
+
+          <p
+            class="text-5xl font-black text-brandYellow heading-font"
+          >
+
+            B3
+
+          </p>
+
+
+          <p
+            class="font-bold"
+          >
+
+            FITNESS
+
+          </p>
+
+
+          <p
+            class="text-gray-500 text-xs mt-1"
+          >
+
+            MUHARRAQ
+
+          </p>
+
+        </div>
+
+
+        <!-- B6 -->
+
+        <div
+          class="absolute bottom-0 left-[25%] -translate-x-1/2 glass px-10 py-7 text-center z-10 hover:border-brandYellow transition"
+        >
+
+          <p
+            class="text-5xl font-black text-brandYellow heading-font"
+          >
+
+            B6
+
+          </p>
+
+
+          <p
+            class="font-bold"
+          >
+
+            FITNESS
+
+          </p>
+
+
+          <p
+            class="text-gray-500 text-xs mt-1"
+          >
+
+            AL HIDD
+
+          </p>
+
+        </div>
+
+
+        <!-- B2 -->
+
+        <div
+          class="absolute bottom-0 right-[25%] translate-x-1/2 glass px-10 py-7 text-center z-10 hover:border-brandYellow transition"
+        >
+
+          <p
+            class="text-5xl font-black text-brandYellow heading-font"
+          >
+
+            B2
+
+          </p>
+
+
+          <p
+            class="font-bold"
+          >
+
+            FITNESS
+
+          </p>
+
+
+          <p
+            class="text-gray-500 text-xs mt-1"
+          >
+
+            GUDAIBIYA
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- MOBILE ECOSYSTEM -->
+
+      <div
+        class="md:hidden grid grid-cols-2 gap-4"
+      >
+
+
+        <div
+          class="col-span-2 yellow-gradient text-black p-10 text-center rounded-full aspect-square flex flex-col justify-center items-center"
+        >
+
+          <p
+            class="text-8xl font-black heading-font"
+          >
+
+            B
+
+          </p>
+
+
+          <p
+            class="font-black tracking-widest"
+          >
+
+            COMPANY
+
+          </p>
+
+        </div>
+
+
+        <div
+          class="glass p-6 text-center"
+        >
+
+          <p
+            class="text-4xl font-black text-brandYellow heading-font"
+          >
+
+            B12
+
+          </p>
+
+
+          <p class="font-bold">
+
+            FITNESS
+
+          </p>
+
+
+          <p
+            class="text-xs text-gray-500"
+          >
+
+            SANABIS
+
+          </p>
+
+        </div>
+
+
+        <div
+          class="glass p-6 text-center"
+        >
+
+          <p
+            class="text-4xl font-black text-brandYellow heading-font"
+          >
+
+            B7
+
+          </p>
+
+
+          <p class="font-bold">
+
+            FITNESS
+
+          </p>
+
+
+          <p
+            class="text-xs text-gray-500"
+          >
+
+            TUBLI
+
+          </p>
+
+        </div>
+
+
+        <div
+          class="glass p-6 text-center"
+        >
+
+          <p
+            class="text-4xl font-black text-brandYellow heading-font"
+          >
+
+            B3
+
+          </p>
+
+
+          <p class="font-bold">
+
+            FITNESS
+
+          </p>
+
+
+          <p
+            class="text-xs text-gray-500"
+          >
+
+            MUHARRAQ
+
+          </p>
+
+        </div>
+
+
+        <div
+          class="glass p-6 text-center"
+        >
+
+          <p
+            class="text-4xl font-black text-brandYellow heading-font"
+          >
+
+            B6
+
+          </p>
+
+
+          <p class="font-bold">
+
+            FITNESS
+
+          </p>
+
+
+          <p
+            class="text-xs text-gray-500"
+          >
+
+            AL HIDD
+
+          </p>
+
+        </div>
+
+
+        <div
+          class="glass p-6 text-center col-span-2"
+        >
+
+          <p
+            class="text-4xl font-black text-brandYellow heading-font"
+          >
+
+            B2
+
+          </p>
+
+
+          <p class="font-bold">
+
+            FITNESS
+
+          </p>
+
+
+          <p
+            class="text-xs text-gray-500"
+          >
+
+            GUDAIBIYA
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="mt-20 text-center"
+      >
+
+        <p
+          class="text-gray-400 text-lg"
+        >
+
+          <span
+            class="text-brandYellow font-bold"
+          >
+
+            5 gyms.
+
+          </span>
+
+          One parent company.
+
+          <span
+            class="text-brandYellow font-bold"
+          >
+
+            One growing vision.
+
+          </span>
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       STATS
+  ====================================================== -->
+
+
+  <section
+    class="py-24 border-y border-white/10"
+  >
+
+    <div
+      class="max-w-7xl mx-auto px-6 lg:px-10"
+    >
+
+      <div
+        class="grid grid-cols-2 lg:grid-cols-4 gap-10 text-center"
+      >
+
+
+        <div
+          class="fade-up"
+        >
+
+          <p
+            class="counter text-6xl md:text-8xl font-black text-brandYellow"
+            data-target="18"
+          >
+
+            0
+
+          </p>
+
+
+          <p
+            class="uppercase text-gray-500 tracking-widest text-xs mt-4"
+          >
+
+            Years Experience
+
+          </p>
+
+        </div>
+
+
+        <div
+          class="fade-up"
+        >
+
+          <p
+            class="counter text-6xl md:text-8xl font-black"
+            data-target="5"
+          >
+
+            0
+
+          </p>
+
+
+          <p
+            class="uppercase text-gray-500 tracking-widest text-xs mt-4"
+          >
+
+            Active Gyms
+
+          </p>
+
+        </div>
+
+
+        <div
+          class="fade-up"
+        >
+
+          <p
+            class="counter text-6xl md:text-8xl font-black text-brandYellow"
+            data-target="3"
+          >
+
+            0
+
+          </p>
+
+
+          <p
+            class="uppercase text-gray-500 tracking-widest text-xs mt-4"
+          >
+
+            New Gyms Coming
+
+          </p>
+
+        </div>
+
+
+        <div
+          class="fade-up"
+        >
+
+          <p
+            class="counter text-6xl md:text-8xl font-black"
+            data-target="10"
+          >
+
+            0
+
+          </p>
+
+
+          <p
+            class="uppercase text-gray-500 tracking-widest text-xs mt-4"
+          >
+
+            Future Gym Target
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       OUR GYMS
+  ====================================================== -->
+
+
+  <section
+    id="gyms"
+    class="py-32"
+  >
+
+    <div
+      class="max-w-7xl mx-auto px-6 lg:px-10"
+    >
+
+
+      <div
+        class="mb-16 fade-up"
+      >
+
+        <p
+          class="text-brandYellow uppercase tracking-[0.3em] text-sm font-bold mb-5"
+        >
+
+          The B Company Network
+
+        </p>
+
+
+        <h2
+          class="heading-font uppercase text-6xl md:text-8xl font-black leading-none"
+        >
+
+          FIVE
+
+          <span
+            class="text-gradient"
+          >
+
+            LOCATIONS.
+
+          </span>
+
+        </h2>
+
+
+        <p
+          class="text-gray-500 mt-6 max-w-xl text-lg"
+        >
+
+          A growing fitness ecosystem built across Bahrain.
+
+        </p>
+
+      </div>
+
+
+      <div
+        class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+
+
+        <!-- B12 -->
+
+        <div
+          class="gym-card glass p-8 min-h-[280px] flex flex-col justify-between fade-up"
+        >
+
+          <div
+            class="flex justify-between"
+          >
+
+            <span
+              class="text-7xl heading-font font-black text-brandYellow"
+            >
+
+              B12
+
+            </span>
+
+
+            <span
+              class="text-xs text-gray-500"
+            >
+
+              01
+
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <h3
+              class="text-2xl font-bold"
+            >
+
+              B12 FITNESS
+
+            </h3>
+
+
+            <p
+              class="text-gray-500 mt-2"
+            >
+
+              Sanabis, Bahrain
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- B7 -->
+
+        <div
+          class="gym-card glass p-8 min-h-[280px] flex flex-col justify-between fade-up"
+        >
+
+          <div
+            class="flex justify-between"
+          >
+
+            <span
+              class="text-7xl heading-font font-black text-brandYellow"
+            >
+
+              B7
+
+            </span>
+
+
+            <span
+              class="text-xs text-gray-500"
+            >
+
+              02
+
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <h3
+              class="text-2xl font-bold"
+            >
+
+              B7 FITNESS
+
+            </h3>
+
+
+            <p
+              class="text-gray-500 mt-2"
+            >
+
+              Tubli, Bahrain
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- B3 -->
+
+        <div
+          class="gym-card glass p-8 min-h-[280px] flex flex-col justify-between fade-up"
+        >
+
+          <div
+            class="flex justify-between"
+          >
+
+            <span
+              class="text-7xl heading-font font-black text-brandYellow"
+            >
+
+              B3
+
+            </span>
+
+
+            <span
+              class="text-xs text-gray-500"
+            >
+
+              03
+
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <h3
+              class="text-2xl font-bold"
+            >
+
+              B3 FITNESS
+
+            </h3>
+
+
+            <p
+              class="text-gray-500 mt-2"
+            >
+
+              Muharraq, Bahrain
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- B6 -->
+
+        <div
+          class="gym-card glass p-8 min-h-[280px] flex flex-col justify-between fade-up"
+        >
+
+          <div
+            class="flex justify-between"
+          >
+
+            <span
+              class="text-7xl heading-font font-black text-brandYellow"
+            >
+
+              B6
+
+            </span>
+
+
+            <span
+              class="text-xs text-gray-500"
+            >
+
+              04
+
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <h3
+              class="text-2xl font-bold"
+            >
+
+              B6 FITNESS
+
+            </h3>
+
+
+            <p
+              class="text-gray-500 mt-2"
+            >
+
+              Al Hidd, Bahrain
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- B2 -->
+
+        <div
+          class="gym-card glass p-8 min-h-[280px] flex flex-col justify-between fade-up"
+        >
+
+          <div
+            class="flex justify-between"
+          >
+
+            <span
+              class="text-7xl heading-font font-black text-brandYellow"
+            >
+
+              B2
+
+            </span>
+
+
+            <span
+              class="text-xs text-gray-500"
+            >
+
+              05
+
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <h3
+              class="text-2xl font-bold"
+            >
+
+              B2 FITNESS
+
+            </h3>
+
+
+            <p
+              class="text-gray-500 mt-2"
+            >
+
+              Gudaibiya, Bahrain
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- UPCOMING -->
+
+        <div
+          class="yellow-gradient p-8 min-h-[280px] flex flex-col justify-between text-black fade-up"
+        >
+
+          <div
+            class="flex justify-between"
+          >
+
+            <span
+              class="text-7xl heading-font font-black"
+            >
+
+              +3
+
+            </span>
+
+
+            <span
+              class="text-xs font-bold"
+            >
+
+              NEXT CHAPTER
+
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <h3
+              class="text-2xl font-black"
+            >
+
+              COMING SOON
+
+            </h3>
+
+
+            <p
+              class="text-black/60 mt-2"
+            >
+
+              Three new gyms currently under development.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       VISION
+  ====================================================== -->
+
+
+  <section
+    id="vision"
+    class="py-32 bg-brandYellow text-black relative overflow-hidden"
+  >
+
+    <div
+      class="absolute right-0 top-0 text-[400px] font-black leading-none opacity-10 heading-font"
+    >
+
+      B
+
+    </div>
+
+
+    <div
+      class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10"
+    >
+
+      <p
+        class="uppercase tracking-[0.3em] text-sm font-bold mb-8"
+      >
+
+        The Bigger Picture
+
+      </p>
+
+
+      <h2
+        class="heading-font uppercase text-7xl md:text-[10rem] font-black leading-[0.8] max-w-5xl"
+      >
+
+        THE VISION
+
+        <br>
+
+        IS BIGGER
+
+        <br>
+
+        THAN FITNESS.
+
+      </h2>
+
+
+      <div
+        class="grid md:grid-cols-2 gap-10 mt-16 max-w-4xl"
+      >
+
+        <div>
+
+          <p
+            class="text-8xl font-black"
+          >
+
+            10+
+
+          </p>
+
+
+          <p
+            class="text-xl font-bold"
+          >
+
+            Gyms across Bahrain
+
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <p
+            class="text-8xl font-black"
+          >
+
+            100+
+
+          </p>
+
+
+          <p
+            class="text-xl font-bold"
+          >
+
+            Team members and staff
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <p
+        class="mt-16 text-2xl md:text-4xl font-bold max-w-4xl leading-tight"
+      >
+
+        “Our goal is not simply to open more gyms.
+
+        Our goal is to build a stronger fitness culture across Bahrain.”
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       LEADERSHIP
+  ====================================================== -->
+
+
+  <section
+    id="leadership"
+    class="py-32"
+  >
+
+    <div
+      class="max-w-7xl mx-auto px-6 lg:px-10"
+    >
+
+      <div
+        class="grid lg:grid-cols-2 gap-20 items-center"
+      >
+
+
+        <div
+          class="relative fade-up"
+        >
+
+          <div
+            class="aspect-[4/5] bg-[#151515] relative overflow-hidden"
+          >
+
+            <img
+              src="image/founder2.png"
+              alt="Shafeerjunu"
+              class="absolute inset-0 w-full h-full object-cover opacity-40"
+            >
+
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"
+            ></div>
+
+
+            <div
+              class="absolute bottom-8 left-8"
+            >
+
+              <p
+                class="text-brandYellow uppercase text-xs tracking-[0.3em]"
+              >
+
+                Founder & Managing Director
+
+              </p>
+
+
+              <h3
+                class="heading-font text-6xl font-black mt-3"
+              >
+
+                SHAFEERJUNU
+
+              </h3>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="fade-up"
+        >
+
+          <p
+            class="text-brandYellow uppercase tracking-[0.3em] text-sm font-bold mb-6"
+          >
+
+            Leadership
+
+          </p>
+
+
+          <h2
+            class="heading-font text-6xl md:text-8xl uppercase font-black leading-none"
+          >
+
+            A LEADER
+
+            <br>
+
+            <span
+              class="text-gradient"
+            >
+
+              WITH PURPOSE.
+
+            </span>
+
+          </h2>
+
+
+          <div
+            class="yellow-line mt-8 mb-8"
+          ></div>
+
+
+          <p
+            class="text-gray-400 text-lg leading-8"
+          >
+
+            Shafeerjunu's journey is driven by a simple belief:
+            when people are given the right environment, the right
+            guidance and the right mindset, they can transform their lives.
+
+          </p>
+
+
+          <p
+            class="text-gray-400 text-lg leading-8 mt-6"
+          >
+
+            His leadership continues to shape the growth of B Company,
+            from a network of five successful gyms today to a larger
+            fitness ecosystem built for the future.
+
+          </p>
+
+
+          <div
+            class="mt-10 flex flex-wrap gap-3"
+          >
+
+            <span
+              class="border border-white/10 px-5 py-3 text-sm text-gray-400"
+            >
+
+              18+ YEARS EXPERIENCE
+
+            </span>
+
+
+            <span
+              class="border border-white/10 px-5 py-3 text-sm text-gray-400"
+            >
+
+              FITNESS ENTREPRENEUR
+
+            </span>
+
+
+            <span
+              class="border border-white/10 px-5 py-3 text-sm text-gray-400"
+            >
+
+              BUSINESS LEADER
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       CONTACT SECTION
+  ====================================================== -->
+
+
+  <section
+    id="contact"
+    class="py-32 bg-[#0d0d0d] relative overflow-hidden"
+  >
+
+
+    <!-- BACKGROUND GLOW -->
+
+    <div
+      class="absolute top-0 right-0 w-96 h-96 bg-yellow-400/10 blur-[140px] rounded-full"
+    ></div>
+
+
+    <div
+      class="absolute bottom-0 left-0 w-96 h-96 bg-yellow-400/5 blur-[140px] rounded-full"
+    ></div>
+
+
+    <div
+      class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10"
+    >
+
+      <div
+        class="grid lg:grid-cols-2 gap-20 items-center"
+      >
+
+
+        <!-- LEFT CONTENT -->
+
+        <div
+          class="fade-up"
+        >
+
+          <p
+            class="text-brandYellow uppercase tracking-[0.3em] text-sm font-bold mb-8"
+          >
+
+            Let's Build Something Stronger
+
+          </p>
+
+
+          <h2
+            class="heading-font text-7xl md:text-[9rem] uppercase font-black leading-[0.8]"
+          >
+
+            LET'S
+
+            <br>
+
+            CONNECT
+
+            <br>
+
+            <span
+              class="text-gradient"
+            >
+
+              WITH JUNAID.
+
+            </span>
+
+          </h2>
+
+
+          <div
+            class="yellow-line mt-10 mb-8"
+          ></div>
+
+
+          <p
+            class="text-gray-400 text-lg leading-8 max-w-xl"
+          >
+
+            Whether you are looking to explore a business opportunity,
+            discuss the future of fitness, or simply connect with the
+            visionary behind B Company —
+
+            <span
+              class="text-white font-semibold"
+            >
+
+              let's start the conversation.
+
+            </span>
+
+          </p>
+
+
+          <p
+            class="text-gray-500 text-lg leading-8 mt-6 max-w-xl"
+          >
+
+            Share your details and your message.
+            Your information will be sent directly through WhatsApp.
+
+          </p>
+
+
+          <!-- DIRECT WHATSAPP BUTTON -->
+
+          <a
+            href="https://wa.me/97335181889?text=Hello%20Junaid%2C%20I%20would%20like%20to%20connect%20with%20you."
+            target="_blank"
+            class="inline-flex items-center gap-3 mt-10 yellow-gradient text-black px-8 py-4 font-black hover:scale-105 transition"
+          >
+
+            <span
+              class="text-xl"
+            >
+
+              💬
+
+            </span>
+
+
+            CHAT ON WHATSAPP
+
+          </a>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <div
+          class="glass p-8 md:p-12 fade-up"
+        >
+
+
+          <div
+            class="mb-8"
+          >
+
+            <p
+              class="text-brandYellow text-xs uppercase tracking-[0.3em] font-bold"
+            >
+
+              Connect With Us
+
+            </p>
+
+
+            <h3
+              class="heading-font text-5xl md:text-6xl font-black uppercase mt-3"
+            >
+
+              START A
+
+              <span
+                class="text-gradient"
+              >
+
+                CONVERSATION.
+
+              </span>
+
+            </h3>
+
+          </div>
+
+
+          <form
+            id="contactForm"
+            class="space-y-6"
+          >
+
+
+            <!-- NAME -->
+
+            <div>
+
+              <label
+                class="block text-xs uppercase tracking-widest text-gray-500 mb-3"
+              >
+
+                Your Name
+
+              </label>
+
+
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter your full name"
+                required
+                class="w-full bg-black/50 border border-white/10 px-5 py-4 text-white outline-none focus:border-brandYellow transition"
+              >
+
+            </div>
+
+
+            <!-- PHONE -->
+
+            <div>
+
+              <label
+                class="block text-xs uppercase tracking-widest text-gray-500 mb-3"
+              >
+
+                Phone Number
+
+              </label>
+
+
+              <input
+                type="tel"
+                id="phone"
+                placeholder="Enter your phone number"
+                required
+                class="w-full bg-black/50 border border-white/10 px-5 py-4 text-white outline-none focus:border-brandYellow transition"
+              >
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div>
+
+              <label
+                class="block text-xs uppercase tracking-widest text-gray-500 mb-3"
+              >
+
+                Email Address
+
+              </label>
+
+
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email address"
+                class="w-full bg-black/50 border border-white/10 px-5 py-4 text-white outline-none focus:border-brandYellow transition"
+              >
+
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <div>
+
+              <label
+                class="block text-xs uppercase tracking-widest text-gray-500 mb-3"
+              >
+
+                Your Message
+
+              </label>
+
+
+              <textarea
+                id="message"
+                rows="5"
+                placeholder="Tell us how we can connect..."
+                required
+                class="w-full bg-black/50 border border-white/10 px-5 py-4 text-white outline-none focus:border-brandYellow transition resize-none"
+              ></textarea>
+
+            </div>
+
+
+            <!-- SUBMIT -->
+
+            <button
+              type="submit"
+              class="w-full yellow-gradient text-black font-black py-5 hover:scale-[1.02] transition flex items-center justify-center gap-3"
+            >
+
+              <span>
+
+                💬
+
+              </span>
+
+
+              SEND MESSAGE ON WHATSAPP
+
+            </button>
+
+
+            <p
+              class="text-gray-600 text-xs text-center"
+            >
+
+              Your details will be sent directly through WhatsApp.
+
+            </p>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+
+  <footer
+    class="border-t border-white/10 py-10"
+  >
+
+    <div
+      class="max-w-7xl mx-auto px-6 lg:px-10"
+    >
+
+      <div
+        class="flex flex-col md:flex-row justify-between items-center gap-6"
+      >
+
+
+        <div
+          class="flex items-center gap-3"
+        >
+
+          <div
+            class="w-10 h-10 yellow-gradient text-black flex items-center justify-center font-black"
+          >
+
+            B
+
+          </div>
+
+
+          <div>
+
+            <p
+              class="font-bold"
+            >
+
+              B COMPANY
+
+            </p>
+
+
+            <p
+              class="text-xs text-gray-600"
+            >
+
+              BUILDING STRONGER FUTURES
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <p
+          class="text-gray-600 text-sm"
+        >
+
+          © 2026 B Company. All Rights Reserved.
+
+        </p>
+
+
+        <p
+          class="text-gray-500 text-sm"
+        >
+
+          Founder:
+
+          <span
+            class="text-brandYellow"
+          >
+
+            Shafeerjunu
+
+          </span>
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+
+  <script>
+
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+
+    const menuBtn = document.getElementById(
+      "menuBtn"
+    );
+
+
+    const mobileMenu = document.getElementById(
+      "mobileMenu"
+    );
+
+
+    menuBtn.addEventListener(
+
+      "click",
+
+      () => {
+
+        mobileMenu.classList.toggle(
+          "active"
+        );
+
+      }
+
+    );
+
+
+    /* =========================
+       CLOSE MOBILE MENU
+    ========================= */
+
+
+    const mobileLinks =
+      document.querySelectorAll(
+        "#mobileMenu a"
+      );
+
+
+    mobileLinks.forEach(
+
+      link => {
+
+        link.addEventListener(
+
+          "click",
+
+          () => {
+
+            mobileMenu.classList.remove(
+              "active"
+            );
+
+          }
+
+        );
+
+      }
+
+    );
+
+
+    /* =========================
+       COUNTER ANIMATION
+    ========================= */
+
+
+    const counters =
+      document.querySelectorAll(
+        ".counter"
+      );
+
+
+    const animateCounter = (
+
+      counter
+
+    ) => {
+
+
+      const target =
+        Number(
+          counter.getAttribute(
+            "data-target"
+          )
+        );
+
+
+      let current = 0;
+
+
+      const increment =
+        target / 60;
+
+
+      const updateCounter = () => {
+
+
+        current += increment;
+
+
+        if (
+
+          current < target
+
+        ) {
+
+
+          counter.innerText =
+            Math.ceil(
+              current
+            );
+
+
+          requestAnimationFrame(
+            updateCounter
+          );
+
+
+        } else {
+
+
+          counter.innerText =
+            target + "+";
+
+        }
+
+      };
+
+
+      updateCounter();
+
+    };
+
+
+    const counterObserver =
+      new IntersectionObserver(
+
+        (
+
+          entries
+
+        ) => {
+
+
+          entries.forEach(
+
+            entry => {
+
+
+              if (
+
+                entry.isIntersecting
+
+              ) {
+
+
+                animateCounter(
+                  entry.target
+                );
+
+
+                counterObserver.unobserve(
+                  entry.target
+                );
+
+              }
+
+            }
+
+          );
+
+        },
+
+        {
+
+          threshold: 0.5
+
+        }
+
+      );
+
+
+    counters.forEach(
+
+      counter => {
+
+        counterObserver.observe(
+          counter
+        );
+
+      }
+
+    );
+
+
+    /* =========================
+       SCROLL ANIMATION
+    ========================= */
+
+
+    const fadeElements =
+      document.querySelectorAll(
+        ".fade-up"
+      );
+
+
+    const fadeObserver =
+      new IntersectionObserver(
+
+        (
+
+          entries
+
+        ) => {
+
+
+          entries.forEach(
+
+            entry => {
+
+
+              if (
+
+                entry.isIntersecting
+
+              ) {
+
+
+                entry.target.classList.add(
+                  "show"
+                );
+
+
+                fadeObserver.unobserve(
+                  entry.target
+                );
+
+              }
+
+            }
+
+          );
+
+        },
+
+        {
+
+          threshold: 0.15
+
+        }
+
+      );
+
+
+    fadeElements.forEach(
+
+      element => {
+
+        fadeObserver.observe(
+          element
+        );
+
+      }
+
+    );
+
+
+    /* =========================
+       CONTACT FORM TO WHATSAPP
+    ========================= */
+
+
+    const contactForm =
+      document.getElementById(
+        "contactForm"
+      );
+
+
+    contactForm.addEventListener(
+
+      "submit",
+
+      function (
+
+        event
+
+      ) {
+
+
+        event.preventDefault();
+
+
+        // Get Form Data
+
+        const name =
+          document
+            .getElementById(
+              "name"
+            )
+            .value
+            .trim();
+
+
+        const phone =
+          document
+            .getElementById(
+              "phone"
+            )
+            .value
+            .trim();
+
+
+        const email =
+          document
+            .getElementById(
+              "email"
+            )
+            .value
+            .trim();
+
+
+        const message =
+          document
+            .getElementById(
+              "message"
+            )
+            .value
+            .trim();
+
+
+        // WhatsApp Number
+
+        const whatsappNumber =
+          "97335181889";
+
+
+        // WhatsApp Message
+
+        const whatsappMessage =
+
+`Hello Junaid,
+
+I would like to connect with you.
+
+━━━━━━━━━━━━━━
+
+Name:
+${name}
+
+Phone:
+${phone}
+
+Email:
+${email}
+
+━━━━━━━━━━━━━━
+
+Message:
+
+${message}
+
+━━━━━━━━━━━━━━
+
+Sent from the B Company Founder Portfolio Website.`;
+
+
+        // Encode Message
+
+        const encodedMessage =
+          encodeURIComponent(
+            whatsappMessage
+          );
+
+
+        // WhatsApp URL
+
+        const whatsappURL =
+
+          `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+
+        // Open WhatsApp
+
+        window.open(
+
+          whatsappURL,
+
+          "_blank"
+
+        );
+
+      }
+
+    );
+
+
+  </script>
+
+
+</body>
+
+</html>
